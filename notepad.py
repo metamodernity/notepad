@@ -26,7 +26,7 @@ while flag == 1:
     if answer == '3':
         num = int(input('Какую заметку вы хотите удалить?'))
         if num > len(notes):
-            print('ОШИБКА! Такой заметки не сущесвует')
+            print('ОШИБКА! Такой заметки не существует')
         else:
             notes.pop(num - 1)
             x = 1
