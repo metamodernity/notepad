@@ -43,7 +43,7 @@ for i in a:
                     for note in notes:
                         print('===============================')
                         print(note.id, note.text)
-                        print('===============================')
+                    print('===============================')
             if answer == '3':
                 num = int(input('Какую заметку вы хотите удалить?'))
                 if num > len(notes):
