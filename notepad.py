@@ -11,6 +11,15 @@ def aboba():
         time.sleep(1)
         clock = clock - 1
     print('💥💥💥💥💥')
+def banner():
+    print('  _   _       _                       _ ')
+    print(' | \ | |     | |                     | |')
+    print(' |  \| | ___ | |_ ___ _ __   __ _  __| |')
+    print(' | . ` |/ _ \| __/ _ \  _ \ / _` |/ _` |')
+    print(' | |\  | (_) | ||  __/ |_) | (_| | (_| |')
+    print(' |_| \_|\___/ \__\___| .__/ \__,_|\__,_|')
+    print('                     | |                ')
+    print('                     |_|                ')
 class Note:
     def __init__(self, id, text):
         self.id = id
@@ -20,15 +29,7 @@ note1 = Note(1, 'Первая заметка')
 note2 = Note(2, 'Вторая заметка')
 note3 = Note(3, 'Третья заметка')
 note4 = Note(4, 'Четвёртая заметка')
-print('  _   _       _                       _ ')
-print(' | \ | |     | |                     | |')
-print(' |  \| | ___ | |_ ___ _ __   __ _  __| |')
-print(' | . ` |/ _ \| __/ _ \  _ \ / _` |/ _` |')
-print(' | |\  | (_) | ||  __/ |_) | (_| | (_| |')
-print(' |_| \_|\___/ \__\___| .__/ \__,_|\__,_|')
-print('                     | |                ')
-print('                     |_|                ')
-
+banner()
 #Аутентификация
 Users = {'metamodernity' : 'myPassword',
          'FatRat' : 'pudgePassword',
