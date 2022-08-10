@@ -20,6 +20,16 @@ note1 = Note(1, 'Первая заметка')
 note2 = Note(2, 'Вторая заметка')
 note3 = Note(3, 'Третья заметка')
 note4 = Note(4, 'Четвёртая заметка')
+print('  _   _       _                       _ ')
+print(' | \ | |     | |                     | |')
+print(' |  \| | ___ | |_ ___ _ __   __ _  __| |')
+print(' | . ` |/ _ \| __/ _ \  _ \ / _` |/ _` |')
+print(' | |\  | (_) | ||  __/ |_) | (_| | (_| |')
+print(' |_| \_|\___/ \__\___| .__/ \__,_|\__,_|')
+print('                     | |                ')
+print('                     |_|                ')
+print('')
+
 #Аутентификация
 Users = {'metamodernity' : 'myPassword',
          'FatRat' : 'pudgePassword',
@@ -29,12 +39,17 @@ password = input('Введите пароль: ')
 a = Users.items()
 for i in a:
     if i[0] == logging and i[1] == password:
-        print('Добро пожаловать', logging,'!')
+        print('Добро пожаловать', logging+'!')
+        print('===============================')
+        print('Элементы управления:')
+        print('1.Создать заметку \n2.Прочить заметки\n3.Удалить заметку\n4.Удалить все заметки\n5.Завершить работу программы')
+        print('===============================')
         while flag == 1:
-            answer = input('Что вы желаете сделать?\n1.Создать заметку \n2.Прочить заметки\n3.Удалить заметку\n4.Удалить все заметки\n5.Завершить работу программы\n')
+            answer = input()
             if answer == '1':
                 num = (len(notes) + 1)
                 txt = str(input('Введите текст заметки:\n'))
+                print('Заметка создана')
                 note = Note(num, txt)
             if answer == '2':
                 if len(notes) == 0:
@@ -50,6 +65,7 @@ for i in a:
                     print('ОШИБКА! Такой заметки не существует')
                 else:
                     notes.pop(num - 1)
+                    print('Заметка удалена')
                     x = 1
                     for note in notes:
                         newId = len(notes) - (len(notes) - x)
@@ -57,6 +73,7 @@ for i in a:
                         x+=1
             if answer == '4':
                 notes.clear()
+                print('Заметки удалены')
             if answer == '5':
                 flag = 0
     else:
